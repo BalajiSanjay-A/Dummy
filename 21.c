@@ -164,41 +164,47 @@
 // }
 
 // substring equal number of 0 and 1 
-
-#include<stdio.h>
-
-#define OFFSET 100000
-
-int main() {
-    char str[100001];
-    scanf("%s",str);
-    
-    int pos[(2*OFFSET)+1];
-    for (int i=0;i<=(2*OFFSET);i++) {
-        pos[i]=-2;
-    }
-
-    pos[OFFSET]= -1;
-    int val=0, maxlen=0;
-    for (int i=0;str[i];i++) {
-        if (str[i]=='1') {
-            val+=1;
-        }else{
-            val-=1;
-        }
-
-        int index=val+OFFSET;
-        if (pos[index]==-2) {
-            pos[index]=i;
-        }else{
-            int l=i-pos[index];
-            if (l>maxlen) maxlen=l;
-        }
-    }
-    printf("%d",maxlen);
-    return 0;
-}
+// 
+// #include<stdio.h>
+// 
+// #define OFFSET 100000
+// 
+// int main() {
+    // char str[100001];
+    // scanf("%s",str);
+//     
+    // int pos[(2*OFFSET)+1];
+    // for (int i=0;i<=(2*OFFSET);i++) {
+        // pos[i]=-2;
+    // }
+// 
+    // pos[OFFSET]= -1;
+    // int val=0, maxlen=0;
+    // for (int i=0;str[i];i++) {
+        // if (str[i]=='1') {
+            // val+=1;
+        // }else{
+            // val-=1;
+        // }
+// 
+        // int index=val+OFFSET;
+        // if (pos[index]==-2) {
+            // pos[index]=i;
+        // }else{
+            // int l=i-pos[index];
+            // if (l>maxlen) maxlen=l;
+        // }
+    // }
+    // printf("%d",maxlen);
+    // return 0;
+// }
 
 //atcoder two language
 
 
+#include<stdio.h>
+int main() {
+	int n;
+	scanf("%d",&n);
+	printf("%d",n);
+}
